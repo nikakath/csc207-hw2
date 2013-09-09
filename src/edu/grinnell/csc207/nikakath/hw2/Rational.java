@@ -1,5 +1,7 @@
 package edu.grinnell.csc207.nikakath.hw2;
 
+//this is a useless change
+
 public class Rational {
 	private int numerator;
 	private int denominator;
