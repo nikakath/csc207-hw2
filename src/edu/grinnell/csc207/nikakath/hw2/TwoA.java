@@ -8,7 +8,7 @@ public class TwoA {
 	public static void main(String[] args) {
 	} //main
 	
-	static boolean isMultiple(long a, long b){
+	public static boolean isMultiple(long a, long b){
 		if(a == 0)
 			return true;
 		if(b == 0)
@@ -16,11 +16,11 @@ public class TwoA {
 		return (a%b == 0);
 	} // isMultiple
 	
-	static boolean isOdd(int i){
+	public static boolean isOdd(int i){
 		return !(isMultiple(i, 2));
 	} //isOdd
 	
-	static int oddSumTo(int n){
+	public static int oddSumTo(int n){
 		int total = 0;
 		for(int i=1; i<n; i+=2){
 			total += i;
@@ -28,7 +28,7 @@ public class TwoA {
 		return total;
 	} // oddSumTo
 	
-	static boolean isOddProd(int[] ints){
+	public static boolean isOddProd(int[] ints){
 		int oddCount = 0;
 		for(int i=0; i < ints.length; i++){
 			if(isOdd(ints[i]))
@@ -39,7 +39,7 @@ public class TwoA {
 		return false;
 	} // isOddProd
 	
-	static boolean allDistinct(int[] ints){
+	public static boolean allDistinct(int[] ints){
 		for(int i=0; i < ints.length; i++){
 			for(int j= i+1; j < ints.length; j++){
 				if(ints[i] == ints[j])
@@ -49,7 +49,7 @@ public class TwoA {
 		return true;
 	} //allDistinct
 	
-	static int[] reverseInts(int[] ints){
+	public static int[] reverseInts(int[] ints){
 		int[] original = new int[ints.length];
 		for(int i=0; i<ints.length; i++){
 			original[i] = ints[i];
