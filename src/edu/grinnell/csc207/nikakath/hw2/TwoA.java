@@ -1,12 +1,6 @@
 package edu.grinnell.csc207.nikakath.hw2;
 
 public class TwoA {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-	} //main
 	
 	public static boolean isMultiple(long a, long b){
 		if(a == 0)
@@ -14,11 +8,11 @@ public class TwoA {
 		if(b == 0)
 			return false;
 		return (a%b == 0);
-	} // isMultiple
+	} // isMultiple(long,long)
 	
 	public static boolean isOdd(int i){
 		return !(isMultiple(i, 2));
-	} //isOdd
+	} //isOdd(int)
 	
 	public static int oddSumTo(int n){
 		int total = 0;
@@ -26,7 +20,7 @@ public class TwoA {
 			total += i;
 		}//for
 		return total;
-	} // oddSumTo
+	} // oddSumTo(int)
 	
 	public static boolean isOddProd(int[] ints){
 		int oddCount = 0;
@@ -37,7 +31,7 @@ public class TwoA {
 				return true;
 		}//for
 		return false;
-	} // isOddProd
+	} // isOddProd(int[])
 	
 	public static boolean allDistinct(int[] ints){
 		for(int i=0; i < ints.length; i++){
@@ -47,7 +41,7 @@ public class TwoA {
 			}//inner for
 		}//outer for
 		return true;
-	} //allDistinct
+	} //allDistinct(int[])
 	
 	public static int[] reverseInts(int[] ints){
 		int[] original = new int[ints.length];
@@ -58,5 +52,5 @@ public class TwoA {
 			ints[i] = original[ints.length - (i + 1)];
 		}//for
 		return ints;
-	} //reverseInts
+	} //reverseInts(int[])
 } //TwoA
