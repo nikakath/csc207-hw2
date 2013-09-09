@@ -1,7 +1,6 @@
 package edu.grinnell.csc207.nikakath.hw2;
 
 public class TwoA {
-	
 	public static boolean isMultiple(long a, long b){
 		if(a == 0)
 			return true;

@@ -8,34 +8,34 @@ public class TestTwoA {
 
 	@Test
 	public void testIsMultiple() {
-		for (long b = -10; b < 11; b++){
+		for (long b = -10; b <= 10; b++){
 			assertEquals("a = 0, b = " + b, true, TwoA.isMultiple(0,b));
 		} //for
-		for (long b = 2; b < 11; b++){
+		for (long b = 2; b <= 10; b++){
 			assertEquals("a is positive prime, b is positive", false, TwoA.isMultiple(11,b));
 		} //for
-		for (long b = -10; b < -1; b++){
+		for (long b = -10; b <= -2; b++){
 			assertEquals("a is positive prime, b is negative", false, TwoA.isMultiple(11,b));
 		} //for
-		for (long b = 2; b < 11; b++){
+		for (long b = 2; b <= 10; b++){
 			assertEquals("a is negative prime, b is positive", false, TwoA.isMultiple(-11,b));
 		} //for
-		for (long b = -10; b < -1; b++){
+		for (long b = -10; b <= -2; b++){
 			assertEquals("a is negative prime, b is negative", false, TwoA.isMultiple(-11,b));
 		} //for
-		for (long a = -10; a < 11; a++){
+		for (long a = -10; a <= 10; a++){
 			assertEquals("b is 1", true, TwoA.isMultiple(a,1));
 		} //for
-		for (long a = -10; a < 0; a++){
+		for (long a = -10; a <= -1; a++){
 			assertEquals("a is negative, b is 0", false, TwoA.isMultiple(a,0));
 		} //for
-		for (long a = 1; a < 11; a++){
+		for (long a = 1; a <= 10; a++){
 			assertEquals("a is positive, b is 0", false, TwoA.isMultiple(a,0));
 		} //for
-		for (long a = -10; a < 0; a += 2){
+		for (long a = -10; a <= -1; a += 2){
 			assertEquals("negative multiples", true, TwoA.isMultiple(a,-2));
 		} //for
-		for (long a = 2; a < 11; a += 2){
+		for (long a = 2; a <= 10; a += 2){
 			assertEquals("positive multiples", true, TwoA.isMultiple(a,2));
 		} //for
 	} //testIsMultiple
@@ -144,7 +144,8 @@ public class TestTwoA {
 			for(int j=-5; j<=5; j++){
 				twoElements[1] = j;
 				twoReversed[0] = j;
-				assertArrayEquals("two element array: {" + twoElements[0] + ", " + twoElements[1] + "} -> {" + twoReversed[0] + ", " + twoReversed[1] + "}", twoReversed, TwoA.reverseInts(twoElements));
+				assertArrayEquals("two element array", twoReversed, TwoA.reverseInts(twoElements));
+				TwoA.reverseInts(twoElements);
 			}//inner for
 		}//outer for
 		
@@ -160,6 +161,7 @@ public class TestTwoA {
 					threeElements[2] = k;
 					threeReversed[0] = k;
 					assertArrayEquals("three element array", threeReversed, TwoA.reverseInts(threeElements));
+					TwoA.reverseInts(threeElements);
 				}//inner for
 			}//middle for
 		}//outer for
